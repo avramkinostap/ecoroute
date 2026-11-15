@@ -179,7 +179,7 @@ Integracje zewnętrzne są za protokołami (`WeatherProvider`, `Geocoder`, `Advi
 - **AI w samej aplikacji:** doradca podróży (Claude API) — opis podejścia w sekcji
   „Jak działa AI” powyżej.
 
-## Czego się  nauczyłem
+## 👨‍🎓 Czego się  nauczyłem
 
 Przy projekcie EcoRoute nauczyłem się budować aplikację full-stack: REST API w FastAPI z wyraźnym podziałem na warstwy (router → serwis → repozytorium), pracę z bazą danych przez SQLAlchemy oraz frontend w React i TypeScript. Zrozumiałem też, jak sensownie wbudować LLM w aplikację: decyzję podejmuje przetestowany kod, a model jedynie wyjaśnia ją użytkownikowi.
 
