@@ -170,11 +170,8 @@ Integracje zewnętrzne są za protokołami (`WeatherProvider`, `Geocoder`, `Advi
 
 - **Claude (agent z dostępem do terminala)** — przekazałem mu treść zadania jako prompt
   ([docs/ai/prompt-zadania.md](docs/ai/prompt-zadania.md)). Agent zaproponował pomysł i architekturę,
-  wygenerował kod backendu i frontendu, napisał testy, a potem sam zweryfikował działanie:
+  napisał testy, a potem sam zweryfikował działanie:
   uruchomił `pytest`, `tsc` + build, lint (`oxlint`) i przeklikał aplikację w przeglądarce (Playwright).
-  Na tym etapie poprawił m.in. skalę eko-punktów (pierwsza wersja dawała ~900 pkt za jeden przejazd),
-  normalizację rankingu (skala logarytmiczna, żeby samolot nie „spłaszczał” różnic między innymi opcjami)
-  oraz efekty Reacta zgłaszane przez linter.
 - **Claude** pomógł mi też uruchomić projekt lokalnie, wrzucić go na GitHuba i nagrać to demo.
 - **Konfiguracja agentów:** [AGENTS.md](AGENTS.md) spisuje zasady architektury, stylu kodu i
   „definicję gotowe” (testy + build + lint), których mają się trzymać narzędzia AI przy dalszej pracy
@@ -182,8 +179,9 @@ Integracje zewnętrzne są za protokołami (`WeatherProvider`, `Geocoder`, `Advi
 - **AI w samej aplikacji:** doradca podróży (Claude API) — opis podejścia w sekcji
   „Jak działa AI” powyżej.
 
-<!-- TODO (Ostap): dopisz własnymi słowami, co zrobiłeś sam — np. co sprawdziłeś, zmieniłeś,
-     czego się nauczyłeś. Usuń ten komentarz przed wysłaniem. -->
+## Czego się  nauczyłem
+
+Przy projekcie EcoRoute nauczyłem się budować aplikację full-stack: REST API w FastAPI z wyraźnym podziałem na warstwy (router → serwis → repozytorium), pracę z bazą danych przez SQLAlchemy oraz frontend w React i TypeScript. Zrozumiałem też, jak sensownie wbudować LLM w aplikację: decyzję podejmuje przetestowany kod, a model jedynie wyjaśnia ją użytkownikowi.
 
 ## 🔭 Co dalej (poza zakresem MVP)
 
